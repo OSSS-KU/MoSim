@@ -1,0 +1,21 @@
+# Normalize every text file to LF, in the repository and in the working tree.
+#
+# The repo previously had no rules here and had drifted into a CRLF/LF mix
+# (Rust sources and most CSVs were CRLF; shell scripts and Markdown were LF).
+# Editing a CRLF file with any LF-writing tool then produced a whole-file
+# diff that buried the real change. These rules make line endings a property
+# of the repository instead of whichever editor touched a file last.
+* text=auto eol=lf
+
+# Shell scripts fail outright if they ever pick up CRLF.
+*.sh    text eol=lf
+
+# Notebooks are JSON — keep them diffable as text.
+*.ipynb text eol=lf
+
+# Binary: never transform.
+*.pdf   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.zip   binary

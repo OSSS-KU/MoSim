@@ -1,0 +1,109 @@
+# Citation File Format — https://citation-file-format.github.io
+#
+# GitHub reads this file to render the "Cite this repository" button.
+# `preferred-citation` points at the paper, so that button yields the paper
+# citation rather than a software citation.
+#
+cff-version: 1.2.0
+message: >-
+  If you use MoSim, please cite the MASCOTS 2026 paper below. Note that the
+  first three authors contributed equally; the Citation File Format has no
+  field for that, so it is recorded here.
+title: MoSim
+# Describes the software artifact. The paper's own abstract is verbatim under
+# `preferred-citation.abstract` below.
+abstract: >-
+  Rust and Python implementation of MoSim, the GPU-cluster simulator from the
+  MASCOTS 2026 paper below, together with the job traces, single-job profiles,
+  physical-testbed ground truth, and scripts that reproduce Tables II-IV.
+type: software
+license: MIT
+version: 0.1.0
+repository-code: https://github.com/OSSS-KU/MoSim
+keywords:
+  - distributed training
+  - network contention modeling
+  - GPU cluster scheduling
+  - simulation fidelity
+  - discrete-event simulation
+authors:
+  - family-names: Yoo
+    given-names: Yeonho
+    affiliation: >-
+      Department of Computer Science and Artificial Intelligence,
+      Dongguk University
+  - family-names: Lee
+    given-names: Hyunho
+    affiliation: >-
+      Department of Computer Science and Engineering, Korea University
+  - family-names: Choi
+    given-names: Hyunmok
+    affiliation: >-
+      Department of Computer Science and Engineering, Korea University
+  - family-names: Yoo
+    given-names: Chuck
+    affiliation: >-
+      Department of Computer Science and Engineering, Korea University
+  - family-names: Yang
+    given-names: Gyeongsik
+    affiliation: >-
+      Department of Computer Science and Engineering, Korea University
+preferred-citation:
+  type: conference-paper
+  title: >-
+    Accurate Simulation of Distributed Training Jobs with Network Contention
+    Modeling
+  year: 2026
+  abstract: >-
+    Trace-driven simulation is widely used to evaluate distributed training (DT)
+    jobs in GPU clusters, but existing simulators either ignore network
+    contention or approximate it with a fixed penalty. This misses how
+    scheduling decisions determine which jobs share server network interfaces
+    and inter-server links, thereby changing networking time during training. As
+    a result, our motivating experiments demonstrate that they incur large
+    errors, reaching up to 73.64% mean absolute percentage error (MAPE) in
+    average job completion time (JCT). This paper introduces MoSim, a
+    GPU-cluster simulator that models DT job execution under dynamic network
+    contention. MoSim combines GPU-free characterization with network contention
+    model: it obtains each job's compute time, networking time, and networking
+    volume without GPUs, then uses the current worker assignment to estimate how
+    shared network interfaces affect each job's iteration time. Our evaluation
+    shows that, compared with existing simulators, MoSim reduces simulation
+    error for average JCT by up to 3.28×, tail (99th-percentile) JCT by up to
+    7.79×, and makespan by up to 8.48×, while modeling NIC contention factors
+    with only 8.63% error on average. By avoiding real-GPU profiling, MoSim also
+    reduces input construction overhead by 44.6×.
+  collection-title: >-
+    2026 34th IEEE International Symposium on Modeling, Analysis, and
+    Simulation of Computer and Telecommunication Systems (MASCOTS)
+  collection-type: proceedings
+  conference:
+    name: >-
+      2026 34th IEEE International Symposium on Modeling, Analysis, and
+      Simulation of Computer and Telecommunication Systems (MASCOTS)
+    city: Genova
+    country: IT
+  publisher:
+    name: IEEE
+  authors:
+    - family-names: Yoo
+      given-names: Yeonho
+      affiliation: >-
+        Department of Computer Science and Artificial Intelligence,
+        Dongguk University
+    - family-names: Lee
+      given-names: Hyunho
+      affiliation: >-
+        Department of Computer Science and Engineering, Korea University
+    - family-names: Choi
+      given-names: Hyunmok
+      affiliation: >-
+        Department of Computer Science and Engineering, Korea University
+    - family-names: Yoo
+      given-names: Chuck
+      affiliation: >-
+        Department of Computer Science and Engineering, Korea University
+    - family-names: Yang
+      given-names: Gyeongsik
+      affiliation: >-
+        Department of Computer Science and Engineering, Korea University

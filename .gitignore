@@ -1,0 +1,24 @@
+# macos system file
+.DS_Store
+
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Rust build artifacts
+**/target/
+
+# data
+*.zip
+*.log
+
+# generated simulation output
+result/
+
+# paper sources — unpublished manuscript + internal notes, do not publish
+MASCOTS26__MoSim/
+MASCOTS26__MoSim.pdf
+
+# scratch
+temp

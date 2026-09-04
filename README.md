@@ -1,5 +1,9 @@
 # MoSim
 
+
+[![IEEE MASCOTS](https://img.shields.io/badge/IEEE%20MASCOTS-2026-00629B)](https://mascots26.iitis.pl/)
+[![License](https://img.shields.io/badge/License-MIT-3DA639)](LICENSE)
+
 **Official artifact for the IEEE MASCOTS 2026 paper**<br>
 *Accurate Simulation of Distributed Training Jobs with Network Contention Modeling*
 
